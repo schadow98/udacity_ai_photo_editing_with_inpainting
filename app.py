@@ -144,7 +144,7 @@ def generate_app(get_processed_inputs, inpaint):
             # This is what the user will interact with
             display_img = gr.Image(
                 label="Input", 
-                show_label=True, 
+                interactive=True, 
                 type='pil',
                 height=IMG_SIZE,
                 width=IMG_SIZE
@@ -152,7 +152,7 @@ def generate_app(get_processed_inputs, inpaint):
 
             sam_mask = gr.AnnotatedImage(
                 label="SAM result",
-                show_label=True,
+                interactive=False,
                 height=IMG_SIZE,
                 width=IMG_SIZE,
                 color_map={"background": "#a89a00"}
@@ -160,7 +160,7 @@ def generate_app(get_processed_inputs, inpaint):
 
             result = gr.Image(
                 label="Output",
-                show_label=True,
+                interactive=False,
                 type='pil',
                 height=IMG_SIZE,
                 width=IMG_SIZE,
